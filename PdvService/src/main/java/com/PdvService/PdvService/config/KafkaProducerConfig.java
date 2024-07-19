@@ -24,7 +24,6 @@ public class KafkaProducerConfig {
     public ProducerFactory<String, Order> producerFactory() {
         ObjectMapper objectMapper = new ObjectMapper();
         objectMapper.configure(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS, false);
-
         Map<String, Object> configProps = new HashMap<>();
         configProps.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.0.14:29092");
         configProps.put(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class);

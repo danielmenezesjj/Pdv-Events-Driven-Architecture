@@ -46,8 +46,8 @@ public class OrderController {
     public ResponseEntity postOrder(@RequestBody OrderDto dto){
         Product product = serviceProduct.getById(dto.productId());
         Order order = new Order(dto, product);
-        kafkaTemplate.send("pdv-estudos", order); // Enviando o OrderDto diretamente
         service.postOrder(order);
+        kafkaTemplate.send("pdv-estudos", order); // Enviando o OrderDto diretamente
         return ResponseEntity.ok(order);
     }
 

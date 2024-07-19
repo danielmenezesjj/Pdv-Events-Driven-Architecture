@@ -16,20 +16,17 @@ public class SendEmailService {
 
     @Autowired
     private JavaMailSender emailSender;
-
     @Autowired
     private KafkaTemplate<String, String> kafkaTemplate;
-
 
     @KafkaListener(topics = "pdv-estudos", groupId = "pdv-estudos")
     public void processarVenda(String mensagemKafka) {
         System.out.println("Venda recebida: " + mensagemKafka);
         EmailSendDTO emailData = new EmailSendDTO("danielmenezesdev2512@gmail.com", "Pedido Realizado", mensagemKafka);
+        kafkaTemplate.send("email-topic", mensagemKafka); // Envia mensagem de confirmação para o tópico email-topic
         sendEmail(emailData);
     }
 
-
-    @KafkaListener(topics = "pdv-estudos", groupId = "pdv-estudos")
     public void sendEmail(EmailSendDTO data) {
         MimeMessage message = emailSender.createMimeMessage();
         MimeMessageHelper helper = new MimeMessageHelper(message);
@@ -42,8 +39,5 @@ public class SendEmailService {
             e.printStackTrace();
         }
     }
-
-
-
 
 }

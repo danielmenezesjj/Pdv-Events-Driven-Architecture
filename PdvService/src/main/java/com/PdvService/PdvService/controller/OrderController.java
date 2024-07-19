@@ -13,6 +13,8 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Optional;
+
 @RestController
 @RequestMapping("/v1/order")
 public class OrderController {
@@ -44,11 +46,20 @@ public class OrderController {
 
     @PostMapping
     public ResponseEntity postOrder(@RequestBody OrderDto dto){
-        Product product = serviceProduct.getById(dto.productId());
-        Order order = new Order(dto, product);
-        service.postOrder(order);
-        kafkaTemplate.send("pdv-estudos", order); // Enviando o OrderDto diretamente
-        return ResponseEntity.ok(order);
+        Optional<Product> optionalProduct = Optional.ofNullable(serviceProduct.getById(dto.productId()));
+
+        if (optionalProduct.isPresent()) {
+            Product product = optionalProduct.get();
+            Integer ValorAtt =  product.getQuantity() - dto.quantity();
+            product.setQuantity(ValorAtt);
+            Order order = new Order(dto, product);
+            service.postOrder(order);
+
+            kafkaTemplate.send("pdv-estudos", order);
+            return ResponseEntity.ok(order);
+        } else {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Product not found");
+        }
     }
 
 //    @PutMapping("/{idOrder}")

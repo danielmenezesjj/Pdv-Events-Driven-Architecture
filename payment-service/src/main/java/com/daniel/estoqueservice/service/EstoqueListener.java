@@ -2,7 +2,7 @@ package com.kipper.estoqueservice.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kipper.estoqueservice.json.VendaJson;
+import com.kipper.estoqueservice.json.OrderJson;
 import com.kipper.estoqueservice.model.PedidoDeVenda;
 import com.kipper.estoqueservice.repository.PedidoRepository;
 
@@ -11,7 +11,6 @@ import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class EstoqueListener {
@@ -28,16 +27,18 @@ public class EstoqueListener {
     }
 
 
-    @KafkaListener(topics = "pdv-estudos", groupId = "pdv-estudos")
+    @KafkaListener(topics = "email-topic", groupId = "pdv-estudos")
     public void processarVenda(String mensagem) throws JsonProcessingException {
-        System.out.println("Venda recebida: " + mensagem);
-        VendaJson venda = objectMapper.readValue(mensagem, VendaJson.class);
-        String productId = venda.getProductId();
-        int quantity = venda.getQuantity();
-        String paymentType = venda.getPaymentType();
-        System.out.println("ProductId: " + productId);
-        System.out.println("Quantity: " + quantity);
-        System.out.println("PaymentType: " + paymentType);
+        System.out.println("Email: " + mensagem);
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        OrderJson order = objectMapper.readValue(mensagem, OrderJson.class);
+
+        String productId = order.getProduct().getId();
+        String idPedido = order.getId();
+        System.out.println("Product ID: " + productId);
+        System.out.println("Id Pedido:" + idPedido);
+        repository.updateStatusParaAprovado(idPedido);
     }
 }
 

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0a9e9c6c-c571-4b14-a4c3-fd796c05757b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/json/OrderJson.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/json/ProductJson.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PdvService/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/PdvService/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/config/KafkaProducerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/config/KafkaProducerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/controller/EmailSendController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/controller/EmailSendController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/services/SendEmailService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SendToEmail/src/main/java/com/sendEmailToTrello/sendEmailToTrello/services/SendEmailService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SendToEmail/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/SendToEmail/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/EstoqueServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/EstoqueServiceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/config/KafkaConsumerConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/config/KafkaConsumerConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/json/VendaJson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/model/PedidoDeVenda.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/model/PedidoDeVenda.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/repository/PedidoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/repository/PedidoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/java/com/kipper/estoqueservice/service/EstoqueListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/java/com/daniel/estoqueservice/service/EstoqueListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/payment-service/src/main/resources/application.properties" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2jTUrFKCnLUjoqe2W31Q6WvAGwZ" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/daniel.jesus/Documents/Estudos/Pdv-Events-Driven-Architecture/payment-service"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0a9e9c6c-c571-4b14-a4c3-fd796c05757b" name="Changes" comment="" />
+      <created>1721410756976</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721410756976</updated>
+    </task>
+    <servers />
+  </component>
+</project>

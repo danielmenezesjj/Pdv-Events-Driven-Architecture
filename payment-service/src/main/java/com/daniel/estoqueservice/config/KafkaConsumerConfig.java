@@ -1,4 +1,4 @@
-package com.sendEmailToTrello.sendEmailToTrello.config;
+package com.kipper.estoqueservice.config;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -17,14 +17,14 @@ import java.util.Map;
 public class KafkaConsumerConfig {
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, String> emailKafkaListenerContainerFactory() {
+    public ConcurrentKafkaListenerContainerFactory<String, String> paymentKafkaListenerContainerFactory() {
         ConcurrentKafkaListenerContainerFactory<String, String> factory = new ConcurrentKafkaListenerContainerFactory<>();
-        factory.setConsumerFactory(emailConsumerFactory());
+        factory.setConsumerFactory(paymentConsumerFactory());
         return factory;
     }
 
     @Bean
-    public ConsumerFactory<String, String> emailConsumerFactory() {
+    public ConsumerFactory<String, String> paymentConsumerFactory() {
         Map<String, Object> config = new HashMap<>();
         config.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.0.14:29092");
         config.put(ConsumerConfig.GROUP_ID_CONFIG, "pdv-estudos");

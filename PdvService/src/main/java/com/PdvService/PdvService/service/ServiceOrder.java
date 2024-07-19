@@ -21,6 +21,10 @@ public class ServiceOrder {
     @Autowired
     private OrderRepository repository;
 
+    @Autowired
+    private ProductRepository productRepository;
+
+
     public List<Order> getAll(){
         var orders = repository.findAll();
         return orders;

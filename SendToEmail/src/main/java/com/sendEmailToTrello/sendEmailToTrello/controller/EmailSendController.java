@@ -22,7 +22,7 @@ public class EmailSendController {
 
     @PostMapping("/send")
     public ResponseEntity sendEmail(@RequestBody EmailSendDTO dto){
-        service.sendEmail(dto);
+//        service.sendEmail(dto);
         return ResponseEntity.ok("Email enviado, teste github/trello");
     }
 

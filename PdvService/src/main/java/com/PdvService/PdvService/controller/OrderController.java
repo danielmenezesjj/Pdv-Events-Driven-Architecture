@@ -19,7 +19,7 @@ public class OrderController {
 
 
     @Autowired
-    private KafkaTemplate<String, OrderDto> kafkaTemplate;
+    private KafkaTemplate<String, Order> kafkaTemplate;
 
 
     @Autowired
@@ -46,7 +46,7 @@ public class OrderController {
     public ResponseEntity postOrder(@RequestBody OrderDto dto){
         Product product = serviceProduct.getById(dto.productId());
         Order order = new Order(dto, product);
-        kafkaTemplate.send("pdv-estudos", dto); // Enviando o OrderDto diretamente
+        kafkaTemplate.send("pdv-estudos", order); // Enviando o OrderDto diretamente
         service.postOrder(order);
         return ResponseEntity.ok(order);
     }

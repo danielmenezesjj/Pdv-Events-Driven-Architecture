@@ -6,6 +6,7 @@ import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;
+import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
@@ -15,6 +16,9 @@ public class SendEmailService {
 
     @Autowired
     private JavaMailSender emailSender;
+
+    @Autowired
+    private KafkaTemplate<String, String> kafkaTemplate;
 
 
     @KafkaListener(topics = "pdv-estudos", groupId = "pdv-estudos")

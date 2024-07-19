@@ -9,7 +9,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-@Entity(name = "order-pdv")
+@Entity(name = "order_pdv")
 @Getter
 @Setter
 @AllArgsConstructor

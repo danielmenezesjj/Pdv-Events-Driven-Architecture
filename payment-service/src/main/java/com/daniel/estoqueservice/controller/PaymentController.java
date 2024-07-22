@@ -1,8 +1,8 @@
-package com.kipper.estoqueservice.controller;
+package com.daniel.estoqueservice.controller;
 
 
-import com.kipper.estoqueservice.model.PedidoDeVenda;
-import com.kipper.estoqueservice.service.EstoqueListener;
+import com.daniel.estoqueservice.model.PedidoDeVenda;
+import com.daniel.estoqueservice.service.EstoqueListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

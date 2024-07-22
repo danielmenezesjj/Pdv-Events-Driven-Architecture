@@ -1,4 +1,4 @@
-package com.kipper.estoqueservice.json;
+package com.daniel.estoqueservice.json;
 
 public class ProductJson {
     private String id;

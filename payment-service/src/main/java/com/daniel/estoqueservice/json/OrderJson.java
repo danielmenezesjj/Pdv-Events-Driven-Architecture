@@ -1,4 +1,4 @@
-package com.kipper.estoqueservice.json;
+package com.daniel.estoqueservice.json;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

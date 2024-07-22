@@ -1,6 +1,6 @@
-package com.kipper.estoqueservice.repository;
+package com.daniel.estoqueservice.repository;
 
-import com.kipper.estoqueservice.model.PedidoDeVenda;
+import com.daniel.estoqueservice.model.PedidoDeVenda;
 import feign.Param;
 import jakarta.transaction.Transactional;
 import org.springframework.data.jpa.repository.JpaRepository;

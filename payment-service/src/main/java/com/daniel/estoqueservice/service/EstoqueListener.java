@@ -1,10 +1,10 @@
-package com.kipper.estoqueservice.service;
+package com.daniel.estoqueservice.service;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.kipper.estoqueservice.json.OrderJson;
-import com.kipper.estoqueservice.model.PedidoDeVenda;
-import com.kipper.estoqueservice.repository.PedidoRepository;
+import com.daniel.estoqueservice.json.OrderJson;
+import com.daniel.estoqueservice.model.PedidoDeVenda;
+import com.daniel.estoqueservice.repository.PedidoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.kafka.annotation.KafkaListener;

@@ -1,4 +1,4 @@
-package com.kipper.estoqueservice.model;
+package com.daniel.estoqueservice.model;
 
 
 

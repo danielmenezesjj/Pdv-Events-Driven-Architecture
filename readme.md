@@ -39,6 +39,6 @@ Este projeto proporcionou uma compreensão prática sobre a arquitetura orientad
 
 Este projeto está disponível para consulta e contribuições no meu repositório do GitHub. Sinta-se à vontade para explorar, sugerir melhorias ou utilizá-lo como base para seus próprios estudos sobre arquitetura orientada a eventos.
 
-
+![video](https://www.linkedin.com/feed/update/urn:li:activity:7220968142200537090/?originTrackingId=QokrwLfHR%2ByruDKJAdSY0w%3D%3D)
 
 ![Demonstração](https://i.imgur.com/O6B6BTW.gif)
